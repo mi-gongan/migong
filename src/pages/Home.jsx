@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React,{ useState,useEffect} from 'react'
 import styled,{keyframes} from 'styled-components'
-import FaceDiagnosis from '../FaceDiagnosis'
+import FaceDiagnosis from '../components/FaceDiagnosis'
 import { useCookies } from "react-cookie";
 
 const Wrap=styled.div`
