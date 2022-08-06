@@ -208,6 +208,7 @@ function DesignerPage() {
   const bookingUrl=location.state.bookingUrl;
   const insta=location.state.insta;
 
+  //버튼 다루는 함수
   const handleScroll = () => {
     const { pageYOffset } = window;
     const deltaY = pageYOffset - pageY;
@@ -218,19 +219,22 @@ function DesignerPage() {
 
   const throttleScroll = throttle(handleScroll, 20);
 
+  //내리면 없어지고 올리면 생기는 이팩트 구현
   useEffect(() => {
     const ref=documentRef.current
       ref.addEventListener('scroll', throttleScroll);
       return () => ref.removeEventListener('scroll', throttleScroll);
   }, [pageY,throttleScroll]);
   
+  //모달함수
   const modalHandle=()=>{
     setModal('open');
-
   };
+  //밖 클릭하면 모달 지우기
   const outClick=()=>{
     setModal('');
   }
+  //x누르면 모달 지우기
   const handleDelete=()=>{
     setModal('');
   }

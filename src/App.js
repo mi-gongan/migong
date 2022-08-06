@@ -7,11 +7,11 @@ import Consulting from './pages/Consulting';
 import styled from 'styled-components'
 import Start from './pages/Start'
 import DesignerPage from './pages/DesignerPage';
-import Mypage from './pages/Mypage';
+// import Mypage from './pages/Mypage';
 import TagManager from 'react-gtm-module';
-import {useCookies} from "react-cookie";
-import { useCallback, useEffect, useState } from 'react';
-import { addUser, getUser } from './firebase';
+// import {useCookies} from "react-cookie";
+// import { useCallback, useEffect, useState } from 'react';
+// import { addUser, getUser } from './firebase';
 
 const Wrap=styled.div`
   max-width: 420px;
@@ -27,14 +27,16 @@ const Screen=styled.div`
 `;
 
 function App() {
-  const [user,setUser]=useState('');
-  const [cookies, setCookie,deleteCookie] = useCookies(["ACCESS_TOKEN","user_id"]);
+  // const [user,setUser]=useState('');
+  // const [cookies, setCookie,deleteCookie] = useCookies(["ACCESS_TOKEN","user_id"]);
   
   const tagManagerArgs={
     gtmId:'GTM-WP3CPZX'
   };
   TagManager.initialize(tagManagerArgs);
 
+  //로그인 기능
+  /*
   const JAVASCRIPT_KEY='af3ae3ba242d443b6d27fade929c7419'
 
   const handleUser=useCallback(()=>{
@@ -116,6 +118,7 @@ function App() {
     deleteCookie('user_id');
     window.location.reload();
   };
+  */
 
   return (
     <Screen>
@@ -125,9 +128,9 @@ function App() {
           <TabBar></TabBar>
           <Routes>
             <Route path="/" element={<Start/>}/>
-            <Route path="/home" element={<Home user_id={user?user.id:''}/>}/>
+            <Route path="/home" element={<Home /*user_id={user?user.id:''}*/ />}/>
             <Route path="/consulting" element={<Consulting/>}/>
-            <Route path="/mypage" element={<Mypage kakaoLogin={kakaoLogin} kakaoLogout={kakaoLogout} kakaoExit={kakaoExit} user={user}/>}/>
+            {/* <Route path="/mypage" element={<Mypage kakaoLogin={kakaoLogin} kakaoLogout={kakaoLogout} kakaoExit={kakaoExit} user={user}/>}/> */}
             <Route path="/consulting/:designer" element={<DesignerPage/>}/>
           </Routes>
         </Router>

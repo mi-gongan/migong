@@ -73,13 +73,17 @@ const Div=styled.div`
 `
 
 function Start() {
-  const [fadeout,setFadeout]=useState(false);
   const navigate=useNavigate();
+
+  const [fadeout,setFadeout]=useState(false);
+
+  //글자가 점점 뚜렷해지는 이팩트
   useEffect(()=>{
     setTimeout(()=>{setFadeout(true)},700)
     window.scrollTo(0, 0);
     setTimeout(()=>{navigate('/home')},3000)
   },[navigate])
+
   return (
     <NavLink to="/home">
       <Screen>
