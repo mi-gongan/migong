@@ -78,10 +78,10 @@ function Start() {
   useEffect(()=>{
     setTimeout(()=>{setFadeout(true)},700)
     window.scrollTo(0, 0);
-    setTimeout(()=>{navigate('/Home')},3000)
+    setTimeout(()=>{navigate('/home')},3000)
   },[navigate])
   return (
-    <NavLink to="/Home">
+    <NavLink to="/home">
       <Screen>
         <div>
           <p className='Logo title'>migong</p>

@@ -27,10 +27,10 @@ const StyledLink=styled(NavLink)`
 function TabBar() {
   return (
     <Wrap>
-      <StyledLink name='0' to="/Home" >얼굴형 진단</StyledLink>
-      {/* <StyledLink name='1' to="/Audio" >맞춤영상</StyledLink> */}
-      <StyledLink name='2' to="/Consulting">컨설팅</StyledLink>
-      {/* <StyledLink name='3' to="/Mypage">마이페이지</StyledLink> */}
+      <StyledLink name='0' to="/home" >얼굴형 진단</StyledLink>
+      {/* <StyledLink name='1' to="/audio" >맞춤영상</StyledLink> */}
+      <StyledLink name='2' to="/consulting">컨설팅</StyledLink>
+      {/* <StyledLink name='3' to="/mypage">마이페이지</StyledLink> */}
     </Wrap>
   )
 }

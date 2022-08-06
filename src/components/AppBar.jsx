@@ -16,7 +16,7 @@ const Box=styled.div`
 
 function AppBar() {
   return (
-    <Link to='/Home' style={{textDecoration:'none',color:'black'}}><Box>migong</Box></Link>
+    <Link to='/home' style={{textDecoration:'none',color:'black'}}><Box>migong</Box></Link>
   )
 }
 
